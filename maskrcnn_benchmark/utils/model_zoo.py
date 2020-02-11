@@ -2,9 +2,14 @@
 import os
 import sys
 
-from torch.utils.model_zoo import _download_url_to_file
-from torch.utils.model_zoo import urlparse
-from torch.utils.model_zoo import HASH_REGEX
+# From: https://github.com/facebookresearch/maskrcnn-benchmark/pull/673/files#diff-1252846857806d2e6071bf2681a76631
+#from torch.utils.model_zoo import _download_url_to_file
+#from torch.utils.model_zoo import urlparse
+#from torch.utils.model_zoo import HASH_REGEX
+
+from torch.hub import _download_url_to_file
+from torch.hub import urlparse
+from torch.hub import HASH_REGEX
 
 from maskrcnn_benchmark.utils.comm import is_main_process
 from maskrcnn_benchmark.utils.comm import synchronize
