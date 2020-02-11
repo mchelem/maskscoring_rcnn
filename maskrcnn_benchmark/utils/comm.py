@@ -110,7 +110,7 @@ def scatter_gather(data):
     rank = torch.distributed.get_rank()
 
     # the data to communicate should be small
-    data_to_communicate = torch.empty(256, dtype=torch.uint8, device="cuda")
+    data_to_communicate = torch.empty(256, dtype=torch.bool, device="cuda")
     if rank == 0:
         # manually creates a temporary directory, that needs to be cleaned
         # afterwards
